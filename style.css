@@ -1,0 +1,353 @@
+/* Font Library */
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text&family=Inter&family=Montserrat&family=Nunito&family=Poppins&family=Quicksand&family=Roboto&display=swap');
+/* 
+font-family: 'Crimson Text', serif;
+font-family: 'Inter', sans-serif;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Nunito', sans-serif;
+font-family: 'Poppins', sans-serif;
+font-family: 'Quicksand', sans-serif;
+font-family: 'Roboto', sans-serif;
+*/
+
+/* Color Library */
+:root {
+    --c1: #0D1116;
+    --c2: #7EE787;
+    --c3: #B7BFC7;
+    --c4: #6E7681;
+    --c5: #9070DC;
+    --c6: #262C33;
+    --c7: #161B22;
+    --w: #FFFFFF;
+}
+/* background-color: var(--c1); */
+
+/* Clear CSS */
+html {
+    scroll-behavior: smooth;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: var(--c1);
+    color: var(--w);
+    position: relative;
+}
+article {
+    line-height: 24px;
+    /* text-align: justify; */
+    font-family: "Nunito", sans-serif;
+    color: var(--c4);
+    font-size: large;
+}
+a {
+    text-decoration: none;
+}
+
+/* Class Shortcut */
+.border {
+    border: 1px dashed var(--w);
+}
+.container {
+    border-radius: 8px;
+    border: 1px solid var(--c6);
+    background-color: var(--c7);
+    padding: 32px;
+}
+.icon {
+    color: var(--c3);
+    position: relative;
+    top: 4px;
+    margin-right: 16px;
+    transform: scale(1.3);
+}
+
+/* Style */
+/* Header */
+#navigation {
+    padding: 0px 16px;
+    position: fixed;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 100;
+    background-color: var(--c1);
+}
+#logo h2 {
+    color: var(--c3);
+    font-family: 'Roboto', sans-serif;
+}
+#navitem ul {
+    cursor: default;
+}
+#navitem ul li {
+    display: inline-block;
+    margin: 0px 10px;
+    color: var(--c3);
+    font-family: 'Roboto', sans-serif;
+}
+#navitem ul li:nth-child(2) {
+    cursor: default;
+}
+#navitem ul li a {
+    text-decoration: none;
+    color: var(--c3);
+    font-family: 'Roboto', sans-serif;
+}
+nav ul li a,
+nav ul li a:after,
+nav ul li a:before {
+  transition: all .5s;
+}
+nav.stroke ul li a,
+nav.fill ul li a {
+  position: relative;
+}
+nav.stroke ul li a:after,
+nav.fill ul li a:after {
+  position: absolute;
+  top: 24px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: '.';
+  color: transparent;
+  background: var(--c3);
+  height: 1px;
+}
+nav.stroke ul li a:hover:after {
+  width: 100%;
+}
+nav.fill ul li a {
+  transition: all 2s;
+}
+
+
+/* Main */
+#landingpage {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: flex-end;
+    padding: 0px 32px;
+    /* background-image: url(https://images.unsplash.com/photo-1595418917831-ef942bd9f9ec?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80); */
+}
+#lpbox1 {
+    min-width: 450px;
+    text-align: center;
+    margin-top: 128px;
+    margin-bottom: 48px;
+}
+#lpbox1 h1 {
+    margin-bottom: 32px;
+    font-size: 42px;
+    color: #7EE787;
+    font-family: "Inter", sans-serif;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    
+}
+#lpbox1 h3 {
+    font-size: 22px;
+    color: #FFFFFF;
+    font-family: "Inter", sans-serif;
+}
+#lpbox2 {
+    max-width: 650px;
+    margin-bottom: 32px;
+}
+#lpbox2 img {
+    width: 100%;
+}
+main section {
+    /* margin: 32px 0px; */
+    padding: 0px 32px;
+    /* height: 80vh; */
+    display: flex;
+    gap: 32px;
+    flex-direction: column;
+}
+main > h2 {
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    color: var(--c3);
+    font-size: 32px;
+    margin: 64px 0px;
+}
+#content {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+#content h2 {
+    font-family: 'Inter', sans-serif;
+    color: var(--c3);
+    margin-bottom: 16px;
+}
+#content article {
+    margin-left: 17px;
+    text-indent:40px
+}
+aside {
+    flex: 1;
+    height: min-content;
+}
+aside h1 {
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    color: var(--c3);
+    font-size: 32px;
+}
+aside h3, h4 {
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    color: var(--c3);margin-bottom: 24px;
+    letter-spacing: 1px;
+}
+aside div {
+    display: flex;
+    justify-content: center;
+}
+aside img {
+    margin: 32px 0px;
+    width: 200px;
+    /* border: 1px solid var(--c3); */
+    border-radius: 8px;
+    
+}
+aside article{
+    text-align: center;
+}
+#gallery {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    padding: 0px 64px;
+    width: 100%;
+    height: 650px;
+}
+#gallery div {
+    border: 1px dashed white;
+    width: 90%;
+}
+  
+/* #gallery div {
+    position: relative;
+    width: 300px;
+    height: 550px;
+}
+ #gallery div:nth-child(even) {
+    position: relative;
+    top: 64px;
+} */
+
+
+/* Footer */
+footer {
+    margin-top: 128px;
+    height: 150px;
+    padding: 0px 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 32px;
+}
+footer h3 {
+    margin-bottom: 8px;
+    color: var(--c5);
+    font-family: 'Inter', sans-serif;
+}
+footer p, span{
+    text-decoration: none;
+    color: var(--c4);
+    font-family: 'nunito', sans-serif;
+}
+#contact h3 a:first-child{
+    color: var(--c3);
+}
+#contact h3 a:last-child{
+    color: var(--c4);
+    cursor:default;
+}
+
+/* For Script */
+#content #buttondiv{
+    display: flex;
+    justify-content: center;
+}
+#more {}
+#readMore {
+    position: relative;
+    display: inline-block;
+    width: 200px;
+    background-color: transparent;
+    color: var(--c3);
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: 1px solid var(--c3);
+    font-family: 'Inter', sans-serif;
+}
+.dblock {display: block;}
+.dnone {display: none;}
+
+/* Media Queries */
+
+@media (min-width: 480px){
+    
+}
+@media (min-width: 768px) {
+    
+}
+@media (min-width: 992px){
+    #lpbox1 {
+        text-align: left;
+        margin-top: 0px;
+    }
+    #lpbox1 h1 {
+        font-size: 48px;
+    }
+    #lpbox1 h3 {
+        font-size: 24px;
+    }
+    #navigation {
+        padding: 0px 64px;
+    }
+    #landingpage {
+        padding: 0px 72px;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    main section {
+        display: flex;
+        flex-direction: row;
+        padding: 0px 72px;
+    }
+    #content {
+        flex: 2;
+    }
+    #content div {
+        max-width: 95%;
+    }
+    aside {
+        flex: 1;
+    }
+    footer {
+        padding: 0px 64px;
+        flex-direction: row;
+        text-align: start;
+        margin-bottom: 0;
+    }
+}
